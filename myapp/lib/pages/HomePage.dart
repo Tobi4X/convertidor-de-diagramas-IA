@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/MyAppState.dart';
 import 'package:myapp/components/homediagramas/listarDiagramas.dart';
 import '../components/UserAccount.dart';
-import 'package:provider/provider.dart';
 
 class HomePage extends StatefulWidget {
   @override
