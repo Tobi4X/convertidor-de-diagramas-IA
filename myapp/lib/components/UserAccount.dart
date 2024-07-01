@@ -8,6 +8,7 @@ class UserAccount extends StatelessWidget{
 
     return ElevatedButton.icon(
       onPressed: (){
+        appState.setDiagView(false);
         appState.logOut();
       },
       icon: Text('Log Out'),

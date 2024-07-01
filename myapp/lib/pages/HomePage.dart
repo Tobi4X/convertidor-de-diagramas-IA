@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/components/favorites/Favorites.dart';
-import '../components/generator/GeneratorPage.dart';
+import 'package:myapp/MyAppState.dart';
+import 'package:myapp/components/homediagramas/listarDiagramas.dart';
 import '../components/UserAccount.dart';
+import 'package:provider/provider.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -9,20 +10,15 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  
   var selectedIndex = 0;
-  
   @override
   Widget build(BuildContext context){
     Widget page;
     switch (selectedIndex){
       case 0:
-        page = GeneratorPage();
+        page = ListarDiagramas();
         break;
       case 1:
-        page = Favorites();
-        break;
-      case 2:
         page = UserAccount();
         break;
       default:
@@ -40,11 +36,7 @@ class _HomePageState extends State<HomePage> {
                   destinations: [
                     NavigationRailDestination(
                       icon: Icon(Icons.home),
-                      label: Text('Home')
-                    ),
-                    NavigationRailDestination(
-                      icon: Icon(Icons.favorite), 
-                      label: Text('Favorites')
+                      label: Text('Home'),
                     ),
                     NavigationRailDestination(
                       icon: Icon(Icons.person), 
